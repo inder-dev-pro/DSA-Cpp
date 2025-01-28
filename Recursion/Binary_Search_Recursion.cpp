@@ -26,7 +26,7 @@ int binary_search(int arr[],int start, int end, int key) {
 
 int main() {
     int arr[5]={1,4,22,34,35};
-    cout<<"Index of Element:"<<binary_search(arr,0,4,34);
+    cout<<binary_search(arr,0,4,34);
     return 0;
 }
 
