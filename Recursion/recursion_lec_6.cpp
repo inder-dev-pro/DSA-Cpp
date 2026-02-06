@@ -15,10 +15,12 @@ using namespace std;
 void sub(vector<int> nums, int index, vector<int>& s, int n) {
     if (index==n) {
         for (int i:s) {cout<<i<<" ";}
+        cout<<endl;
+        return;
     }
     s.push_back(nums[index]);
     sub(nums, index+1, s, n);
-    s.erase(s.begin()+index);
+    s.pop_back();
     sub(nums, index+1, s, n);
 }
 
@@ -26,5 +28,4 @@ int main() {
     vector<int> nums={3,1,2};
     vector<int> s;
     sub(nums, 0, s, 3);
-    
 }
