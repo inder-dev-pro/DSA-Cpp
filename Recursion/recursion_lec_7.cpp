@@ -23,8 +23,10 @@ void rec(vector<int> nums, int index, int sum, vector<int> &sub, int target) {
         return;
     }
     sub.push_back(nums[index]);
-    rec(nums, index+1, sum+nums[index], sub, target);
+    sum+=nums[index];
+    rec(nums, index+1, sum, sub, target);
     sub.pop_back();
+    sum-=nums[index];
     rec(nums, index+1, sum, sub, target);
 }
 
